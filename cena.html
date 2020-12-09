@@ -4,6 +4,19 @@
     <meta charset="utf-8">
     <title>Malarz</title>
     <link rel="stylesheet" type="text/css" href="styl.css">
+
+
+    <script type="text/javascript">
+    //pamiętać o słowie function przed nazwa funkcji!!!
+      function fun1(){
+        let powierzchnia = document.getElementById('formularz').powierzchnia.value;
+        let litry = powierzchnia / 4;
+        let puszki = Math.ceil(litry);  //zaokrąglanie w górę "sufit=ceiling"
+        document.getElementById("wynik").innerHTML = "Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: "+puszki;
+        return false; // aby strona się nie przeładowywała posubmitowaniu
+      }
+    </script>
+
   </head>
   <body>
     <div id="wrapper">
@@ -19,29 +32,18 @@
 
       <div id="p_p">
         <h3>Obliczanie na podstawie powierzchni zapotrzebowania na farbę</h3>
-        <form id="formularz" name="formularz" onsubmit="return fun1()">
+
+
+        <form id="formularz" name="formularz">
           Podaj powierzchnię: <input type="text" name="powierzchnia" value=""><br />
-          <input type="submit" name="submit" value="Policz">
+          <button type="button" name="button" onclick="return fun1()">AAA</button>
         </form>
+
         <p id="wynik"></p>
+
+
+
       </div>
-
-      <script type="text/javascript">
-      //pamiętać o słowie function przed nazwa funkcji!!!
-        function fun1(){
-          let powierzchnia = document.getElementById('formularz').powierzchnia.value;
-          let litry = powierzchnia / 4;
-          let puszki = Math.ceil(litry);  //zaokrąglanie w górę "sufit=ceiling"
-          document.getElementById("wynik").innerHTML = "Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: "+puszki;
-          return false;
-
-        }
-      </script>
-
-
-
-
-
       <div id="stopka">
         MALARZ<br />
         Stronę opracował: 54654654654
