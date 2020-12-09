@@ -13,7 +13,7 @@
         let litry = powierzchnia / 4;
         let puszki = Math.ceil(litry);  //zaokrąglanie w górę "sufit=ceiling"
         document.getElementById("wynik").innerHTML = "Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: "+puszki;
-        return false; // aby strona się nie przeładowywała posubmitowaniu
+        return false; // aby strona się nie przeładowywała po submitowaniu
       }
     </script>
 
@@ -33,12 +33,17 @@
       <div id="p_p">
         <h3>Obliczanie na podstawie powierzchni zapotrzebowania na farbę</h3>
 
-
+        <!--
+            Tu jest formularz z jednym polem tekstowym i guzikiem.
+            Po kliknięciu guzika Policz wywoływany jest skrypt
+            za pomoca onlicka
+        -->
         <form id="formularz" name="formularz">
           Podaj powierzchnię: <input type="text" name="powierzchnia" value=""><br />
-          <button type="button" name="button" onclick="return fun1()">AAA</button>
+          <button type="button" name="button" onclick="fun1()">Policz</button>
         </form>
 
+        <!--do tego akapitu wstawimy wynik za pomoca skryptu-->
         <p id="wynik"></p>
 
 
